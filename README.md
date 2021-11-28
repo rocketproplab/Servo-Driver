@@ -13,7 +13,7 @@ A servo driver with battery backup to ensure failsafe.
 ## External Supply and Battery Voltage
 These voltages are dependent on what servo is being driven, but these voltages should not only be very close to one another, but be within the range 5-12v.
 
-# Current
+## Current
 Current should not exceed roughly 3 amps continous, probably can handle up to 8 amps burst (10 sec).
 
 # Connectivity
