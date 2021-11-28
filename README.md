@@ -15,7 +15,7 @@ A servo driver with battery backup to ensure failsafe.
 
 ## External Supply and Battery Voltage
 
-These voltages are dependent on what servo is being driven, but these voltages should not only be very close to one another, but be within the range 5-12v.
+These voltages are dependent on what servo is being driven. They should not only be very close to one another, but also must be within the range of 5-12v.
 
 ## Current
 
@@ -36,9 +36,11 @@ Battery connection.
 ### 4-pin
 
 - Power supply
+
 - I2C
   
   ### 3-pin
+
 - Servo signal and power
 
 # Troubleshooting
@@ -46,7 +48,7 @@ Battery connection.
 ## Debug LEDs
 
 | LED             | Description                                                                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Orange (ONBATT) | Indicates external supply is not present or insufficient and the backup battery is now supplying power. This will also trigger moving the servo to the configured safe state. |
 | Red (REGERR)    | Indicates the LDO regulator for the microcontroller is unable to maintain output (check battery or supply voltage).                                                           |
 | Green (PWR)     | Directly connected to internal 3v3 rail. Basically the opposite of REGERR.                                                                                                    |
