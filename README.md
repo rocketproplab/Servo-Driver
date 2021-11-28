@@ -1,37 +1,48 @@
-![](Thumb.png)
+<img src="Thumb.png" title="" alt="" data-align="center">
 
 # Servo-Driver
+
 A servo driver with battery backup to ensure failsafe.
 
 # Features
+
 - Programming and debug over USB or I2C
 - Passively switches to battery when supply is interrupted
 - Detects when on battery and positions servo at configured safe state
 - Debug LEDs
 
 # Ratings
+
 ## External Supply and Battery Voltage
+
 These voltages are dependent on what servo is being driven, but these voltages should not only be very close to one another, but be within the range 5-12v.
 
 ## Current
+
 Current should not exceed roughly 3 amps continous, probably can handle up to 8 amps burst (10 sec).
 
 # Connectivity
+
 ## USB-C
+
 Bootloader access and serial communication.
 
 ## XT30
+
 Battery connection.
 
 ## Molex Micro-Fit
+
 ### 4-pin
+
 - Power supply
 - I2C
-### 3-pin
+  
+  ### 3-pin
 - Servo signal and power
 
-
 # Troubleshooting
+
 ## Debug LEDs
 
 | LED             | Description                                                                                                                                                                   |
