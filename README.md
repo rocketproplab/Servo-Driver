@@ -33,14 +33,11 @@ Battery connection.
 
 # Troubleshooting
 ## Debug LEDs
-### Orange (ONBATT)
-Indicates external supply is not present or insufficient and the backup battery is now supplying power.
-This will also trigger moving the servo to the configured safe state.
 
-### Red (REGERR)
-Indicates the LDO regulator for the microcontroller is unable to maintain output (check battery or supply voltage).
-
-### Green (PWR)
-Directly connected to internal 3v3 rail. Basically the opposite of REGERR.
+| LED             | Description                                                                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Orange (ONBATT) | Indicates external supply is not present or insufficient and the backup battery is now supplying power. This will also trigger moving the servo to the configured safe state. |
+| Red (REGERR)    | Indicates the LDO regulator for the microcontroller is unable to maintain output (check battery or supply voltage).                                                           |
+| Green (PWR)     | Directly connected to internal 3v3 rail. Basically the opposite of REGERR.                                                                                                    |
 
 ## WIP
