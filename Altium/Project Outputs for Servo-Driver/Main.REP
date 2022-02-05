@@ -2,6 +2,73 @@
 FileName = Main.GBR
 AutoAperture = True
 *************************************************************
+Generating : Top Layer
+      File : Main.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D11
+    D13
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D25
+    D26
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+*************************************************************
+
+*************************************************************
+Generating : Int1 (GND)
+      File : Main.G1
+
+    Adding Layer      : Int1 (GND)
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D43
+    D46
+    D48
+    D49
+*************************************************************
+
+*************************************************************
+Generating : Int2
+      File : Main.G2
+
+    Adding Layer      : Int2
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D13
+    D46
+    D49
+    D50
+*************************************************************
+
+*************************************************************
 Generating : Bottom Layer
       File : Main.GBL
 
@@ -19,6 +86,43 @@ Used DCodes :
     D48
     D49
     D50
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : Main.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Bottom Overlay
+      File : Main.GBO
+
+    Adding Layer      : Bottom Overlay
+
+
+Used DCodes :
+    D13
+    D51
+*************************************************************
+
+*************************************************************
+Generating : Board Shape
+      File : Main.GM11
+
+    Adding Layer      : Board Shape
+
+
+Used DCodes :
+    D11
 *************************************************************
 
 *************************************************************
@@ -74,9 +178,9 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D18
-    D20
-    D21
+    D22
+    D23
+    D25
     D26
     D27
     D28
@@ -112,108 +216,5 @@ Used DCodes :
     D38
     D39
     D40
-*************************************************************
-
-*************************************************************
-Generating : Bottom Paste
-      File : Main.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : Main.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-    D13
-    D51
-*************************************************************
-
-*************************************************************
-Generating : Board Shape
-      File : Main.GM11
-
-    Adding Layer      : Board Shape
-
-
-Used DCodes :
-    D10
-*************************************************************
-
-*************************************************************
-Generating : Int2
-      File : Main.G2
-
-    Adding Layer      : Int2
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D13
-    D46
-    D48
-*************************************************************
-
-*************************************************************
-Generating : Int1 (GND)
-      File : Main.G1
-
-    Adding Layer      : Int1 (GND)
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D44
-    D46
-    D48
-    D49
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : Main.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D10
-    D13
-    D16
-    D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
-    D49
-    D50
 *************************************************************
 

@@ -24,16 +24,25 @@ void ADC_0_example(void)
 	}
 }
 
-void I2C_0_example(void)
-{
-	struct io_descriptor *io;
-	uint8_t               c;
+static struct io_descriptor *io;
 
-	i2c_s_sync_get_io_descriptor(&I2C_0, &io);
-	i2c_s_sync_set_addr(&I2C_0, 1);
-	i2c_s_sync_enable(&I2C_0);
+static void I2C_0_rx_complete(const struct i2c_s_async_descriptor *const descr)
+{
+	uint8_t c;
 
 	io_read(io, &c, 1);
+}
+
+void I2C_0_example(void)
+{
+	i2c_s_async_get_io_descriptor(&I2C_0, &io);
+	i2c_s_async_register_callback(&I2C_0, I2C_S_RX_COMPLETE, I2C_0_rx_complete);
+	i2c_s_async_enable(&I2C_0);
+}
+
+void delay_example(void)
+{
+	delay_ms(5000);
 }
 
 /**

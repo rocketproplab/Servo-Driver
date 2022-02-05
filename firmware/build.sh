@@ -1,12 +1,10 @@
 cd start/gcc
 echo "Building..."
-make 2>&1 > /dev/null
-clear
+make
 echo "Done."
 cp -p AtmelStart.bin ../../firmware.bin
 echo "Cleanup..."
-# make clean and hide the output
-make clean 2>&1 > /dev/null
+make clean
 cd ../../
 find . -name "*.d" -delete
 echo "Done."

@@ -17,7 +17,8 @@
 
 struct adc_sync_descriptor ADC_0;
 
-struct i2c_s_sync_descriptor I2C_0;
+struct i2c_s_async_descriptor I2C_0;
+uint8_t                       SERCOM0_i2c_s_buffer[SERCOM0_I2CS_BUFFER_SIZE];
 
 struct pwm_descriptor PWM_0;
 
@@ -28,6 +29,11 @@ void ADC_0_PORT_init(void)
 	gpio_set_pin_direction(VSENS, GPIO_DIRECTION_OFF);
 
 	gpio_set_pin_function(VSENS, PINMUX_PA02B_ADC_AIN0);
+
+	// Disable digital pin circuitry
+	gpio_set_pin_direction(VSUP, GPIO_DIRECTION_OFF);
+
+	gpio_set_pin_function(VSUP, PINMUX_PA03B_ADC_AIN1);
 }
 
 void ADC_0_CLOCK_init(void)
@@ -77,8 +83,13 @@ void I2C_0_CLOCK_init(void)
 void I2C_0_init(void)
 {
 	I2C_0_CLOCK_init();
-	i2c_s_sync_init(&I2C_0, SERCOM0);
+	i2c_s_async_init(&I2C_0, SERCOM0, SERCOM0_i2c_s_buffer, SERCOM0_I2CS_BUFFER_SIZE);
 	I2C_0_PORT_init();
+}
+
+void delay_driver_init(void)
+{
+	delay_init(SysTick);
 }
 
 void PWM_0_PORT_init(void)
@@ -121,6 +132,8 @@ void system_init(void)
 	ADC_0_init();
 
 	I2C_0_init();
+
+	delay_driver_init();
 
 	PWM_0_init();
 }

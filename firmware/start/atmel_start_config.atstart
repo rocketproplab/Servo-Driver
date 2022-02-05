@@ -1,5 +1,5 @@
 format_version: '2'
-name: My Project
+name: Servo Driver
 versions:
   api: '1.0'
   backend: 1.8.580
@@ -63,6 +63,13 @@ drivers:
       definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::optional_signal_definition::ADC.AIN.0
       name: ADC/AIN/0
       label: AIN/0
+    - identifier: ADC_0:AIN/1
+      pad: PA03
+      mode: Enabled
+      configuration: null
+      definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::optional_signal_definition::ADC.AIN.1
+      name: ADC/AIN/1
+      label: AIN/1
     variant: null
     clocks:
       domain_group:
@@ -205,9 +212,9 @@ drivers:
         configuration: {}
   I2C_0:
     user_label: I2C_0
-    definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::SERCOM0::driver_config_definition::I2C.Slave.Standard~2FFast-mode::HAL:Driver:I2C.Slave.Sync
+    definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::SERCOM0::driver_config_definition::I2C.Slave.Standard~2FFast-mode::HAL:Driver:I2C.Slave.Async
     functionality: I2C
-    api: HAL:Driver:I2C_Slave_Sync
+    api: HAL:Driver:I2C_Slave_Async
     configuration:
       i2c_slave_address: 165
       i2c_slave_address_mask: 0
@@ -244,6 +251,17 @@ drivers:
         configuration:
           core_gclk_selection: Generic clock generator 0
           slow_gclk_selection: Generic clock generator 3
+  DELAY_0:
+    user_label: DELAY_0
+    definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::SysTick::driver_config_definition::Delay::HAL:Driver:Delay
+    functionality: Delay
+    api: HAL:Driver:Delay
+    configuration:
+      systick_arch_tickint: false
+    optional_signals: []
+    variant: null
+    clocks:
+      domain_group: null
   PWM_0:
     user_label: PWM_0
     definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::TC3::driver_config_definition::PWM::HAL:Driver:PWM
@@ -654,6 +672,12 @@ pads:
     definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::pad::PA02
     mode: Analog
     user_label: VSENS
+    configuration: null
+  VSUP:
+    name: PA03
+    definition: Atmel:SAMD21D_Drivers:0.0.1::SAMD21E17L-MF::pad::PA03
+    mode: Analog
+    user_label: VSUP
     configuration: null
   SDA:
     name: PA08

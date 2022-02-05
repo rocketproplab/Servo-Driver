@@ -23,13 +23,17 @@ extern "C" {
 
 #include <hal_adc_sync.h>
 
-#include <hal_i2c_s_sync.h>
+#include <hal_i2c_s_async.h>
+
+#include <hal_delay.h>
 #include <hal_pwm.h>
 #include <hpl_tc_base.h>
 
+#define SERCOM0_I2CS_BUFFER_SIZE 16
+
 extern struct adc_sync_descriptor ADC_0;
 
-extern struct i2c_s_sync_descriptor I2C_0;
+extern struct i2c_s_async_descriptor I2C_0;
 
 extern struct pwm_descriptor PWM_0;
 
@@ -37,9 +41,11 @@ void ADC_0_PORT_init(void);
 void ADC_0_CLOCK_init(void);
 void ADC_0_init(void);
 
+void I2C_0_PORT_init(void);
 void I2C_0_CLOCK_init(void);
 void I2C_0_init(void);
-void I2C_0_PORT_init(void);
+
+void delay_driver_init(void);
 
 void PWM_0_PORT_init(void);
 void PWM_0_CLOCK_init(void);

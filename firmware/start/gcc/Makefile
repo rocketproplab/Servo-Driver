@@ -33,6 +33,7 @@ SUB_DIRS +=  \
 ../hpl/adc \
 ../hpl/tc \
 ../samd21d/gcc \
+../hpl/systick \
 ../hpl/dmac \
 ../hal/src \
 ../hpl/pm \
@@ -47,8 +48,9 @@ SUB_DIRS +=  \
 # List the object files
 OBJS +=  \
 ../hal/src/hal_io.o \
-../hal/src/hal_i2c_s_sync.o \
+../hpl/systick/hpl_systick.o \
 ../samd21d/gcc/gcc/startup_samd21.o \
+../hal/src/hal_i2c_s_async.o \
 ../hal/utils/src/utils_syscalls.o \
 ../hal/src/hal_pwm.o \
 ../hal/src/hal_delay.o \
@@ -67,6 +69,7 @@ OBJS +=  \
 ../driver_init.o \
 ../hal/src/hal_adc_sync.o \
 ../hpl/sercom/hpl_sercom.o \
+../hal/utils/src/utils_ringbuffer.o \
 ../hal/src/hal_gpio.o \
 ../hal/utils/src/utils_event.o \
 ../hal/src/hal_sleep.o \
@@ -77,8 +80,9 @@ OBJS +=  \
 
 OBJS_AS_ARGS +=  \
 "../hal/src/hal_io.o" \
-"../hal/src/hal_i2c_s_sync.o" \
+"../hpl/systick/hpl_systick.o" \
 "../samd21d/gcc/gcc/startup_samd21.o" \
+"../hal/src/hal_i2c_s_async.o" \
 "../hal/utils/src/utils_syscalls.o" \
 "../hal/src/hal_pwm.o" \
 "../hal/src/hal_delay.o" \
@@ -97,6 +101,7 @@ OBJS_AS_ARGS +=  \
 "../driver_init.o" \
 "../hal/src/hal_adc_sync.o" \
 "../hpl/sercom/hpl_sercom.o" \
+"../hal/utils/src/utils_ringbuffer.o" \
 "../hal/src/hal_gpio.o" \
 "../hal/utils/src/utils_event.o" \
 "../hal/src/hal_sleep.o" \
@@ -120,6 +125,7 @@ DIR_INCLUDES +=  \
 -I"../hpl/port" \
 -I"../hpl/sercom" \
 -I"../hpl/sysctrl" \
+-I"../hpl/systick" \
 -I"../hpl/tc" \
 -I"../hri" \
 -I"../" \
@@ -130,9 +136,10 @@ DIR_INCLUDES +=  \
 DEPS := $(OBJS:%.o=%.d)
 
 DEPS_AS_ARGS +=  \
-"hal/src/hal_i2c_s_sync.d" \
 "hal/utils/src/utils_event.d" \
 "hal/src/hal_io.d" \
+"hpl/systick/hpl_systick.d" \
+"hal/src/hal_i2c_s_async.d" \
 "hal/utils/src/utils_syscalls.d" \
 "samd21d/gcc/gcc/startup_samd21.d" \
 "hal/src/hal_pwm.d" \
@@ -151,6 +158,7 @@ DEPS_AS_ARGS +=  \
 "main.d" \
 "examples/driver_examples.d" \
 "hal/src/hal_sleep.d" \
+"hal/utils/src/utils_ringbuffer.d" \
 "hpl/sercom/hpl_sercom.d" \
 "hal/src/hal_gpio.d" \
 "hal/src/hal_atomic.d" \
