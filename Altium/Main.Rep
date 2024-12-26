@@ -1,0 +1,75 @@
+Export log for : Main.Rep
+AddingPadStyle (Default)
+AddingPadStyle P:EX197Y197D1221
+AddingPadStyle EF22X24TOP1
+AddingPadStyle EF16X20TOP1
+AddingPadStyle EF29X94TOP1
+AddingPadStyle EF20X24TOP1
+AddingPadStyle EF22X31TOP1
+AddingPadStyle EF10X30TOP1
+AddingPadStyle EF134X134TOP1
+AddingPadStyle EF39X57TOP1
+AddingPadStyle P:EX118Y118D671
+AddingPadStyle P:EX59Y59D391
+AddingPadStyle P:EX160Y160D1181
+AddingPadStyle P:EX60Y60D401
+AddingPadStyle EF63X39TOP1
+Adding ViaStyle (Default)
+Adding ViaStyle V:EX20Y20D81
+Adding ViaStyle V:EX18Y18D81
+Adding ViaStyle V:EX24Y24D121
+Adding TextStyle (Default)
+Adding TextStyle T:H60W10
+Adding TextStyle T:H30W8
+Adding TextStyle T:H30W6
+Adding TextStyle T:H300W8
+Adding TextStyle T:H100W12
+Adding TextStyle T:H39W4
+Adding PatternDef RESC1005X04N_1
+Adding PatternDef FP-GCM155-0_05-MFG_1
+Adding PatternDef FP-GRM155-0_1-MFG_1
+Adding PatternDef FP-M50-3600542-MFG_1
+Adding PatternDef FP-SML-P1-MFG_1
+Adding PatternDef SOT95P280X145-6L_1
+Adding PatternDef QFN50P500X500X100_HS-33L_1
+Adding PatternDef EVQ-P2402M_1
+Adding PatternDef XT30PW-M_1
+Adding PatternDef 436500300_1
+Adding PatternDef 436500400_1
+Adding PatternDef SODFL470X105-2L_1
+Adding PatternDef FP-GRT155-0_05-MFG_1
+Adding CompDef RESC1005X04N_1
+Adding CompDef FP-GCM155-0_05-MFG_1
+Adding CompDef FP-GRM155-0_1-MFG_1
+Adding CompDef FP-M50-3600542-MFG_1
+Adding CompDef FP-SML-P1-MFG_1
+Adding CompDef SOT95P280X145-6L_1
+Adding CompDef QFN50P500X500X100_HS-33L_1
+Adding CompDef EVQ-P2402M_1
+Adding CompDef XT30PW-M_1
+Adding CompDef 436500300_1
+Adding CompDef 436500400_1
+Adding CompDef SODFL470X105-2L_1
+Adding CompDef FP-GRT155-0_05-MFG_1
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+      Warning: Unexpected Free Text Object Found On Layer BottomOverlay.   This may cause problems in PCAD PCB
+      Warning: Unexpected Poly Region Object Found On Layer BottomOverlay.
+      Warning: Arcs In Polygon have been converted to Line Segments
+      Warning: Polygon has been imported as unpoured.  It will need to be repoured in PCAD
+ 
+EndLog

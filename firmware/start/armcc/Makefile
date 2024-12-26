@@ -44,7 +44,7 @@ hpl/core
 OBJS +=  \
 hal/src/hal_io.o \
 hpl/systick/hpl_systick.o \
-hal/src/hal_i2c_s_async.o \
+hal/src/hal_i2c_s_sync.o \
 hal/src/hal_pwm.o \
 hal/src/hal_delay.o \
 hpl/pm/hpl_pm.o \
@@ -61,7 +61,6 @@ examples/driver_examples.o \
 driver_init.o \
 hal/src/hal_adc_sync.o \
 hpl/sercom/hpl_sercom.o \
-hal/utils/src/utils_ringbuffer.o \
 hal/src/hal_gpio.o \
 hal/utils/src/utils_event.o \
 hal/src/hal_sleep.o \
@@ -73,7 +72,7 @@ hpl/adc/hpl_adc.o
 OBJS_AS_ARGS +=  \
 "hal/src/hal_io.o" \
 "hpl/systick/hpl_systick.o" \
-"hal/src/hal_i2c_s_async.o" \
+"hal/src/hal_i2c_s_sync.o" \
 "hal/src/hal_pwm.o" \
 "hal/src/hal_delay.o" \
 "hpl/pm/hpl_pm.o" \
@@ -90,7 +89,6 @@ OBJS_AS_ARGS +=  \
 "driver_init.o" \
 "hal/src/hal_adc_sync.o" \
 "hpl/sercom/hpl_sercom.o" \
-"hal/utils/src/utils_ringbuffer.o" \
 "hal/src/hal_gpio.o" \
 "hal/utils/src/utils_event.o" \
 "hal/src/hal_sleep.o" \
@@ -103,10 +101,10 @@ OBJS_AS_ARGS +=  \
 DEPS := $(OBJS:%.o=%.d)
 
 DEPS_AS_ARGS +=  \
+"hal/src/hal_i2c_s_sync.d" \
 "hal/utils/src/utils_event.d" \
 "hal/src/hal_io.d" \
 "hpl/systick/hpl_systick.d" \
-"hal/src/hal_i2c_s_async.d" \
 "hal/src/hal_pwm.d" \
 "hpl/core/hpl_core_m0plus_base.d" \
 "hal/utils/src/utils_list.d" \
@@ -122,7 +120,6 @@ DEPS_AS_ARGS +=  \
 "main.d" \
 "examples/driver_examples.d" \
 "hal/src/hal_sleep.d" \
-"hal/utils/src/utils_ringbuffer.d" \
 "hpl/sercom/hpl_sercom.d" \
 "hal/src/hal_gpio.d" \
 "hal/src/hal_atomic.d" \

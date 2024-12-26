@@ -1,3 +1,4 @@
+rm firmware.bin
 cd start/gcc
 echo "Building..."
 make

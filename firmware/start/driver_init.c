@@ -17,8 +17,7 @@
 
 struct adc_sync_descriptor ADC_0;
 
-struct i2c_s_async_descriptor I2C_0;
-uint8_t                       SERCOM0_i2c_s_buffer[SERCOM0_I2CS_BUFFER_SIZE];
+struct i2c_s_sync_descriptor I2C_0;
 
 struct pwm_descriptor PWM_0;
 
@@ -83,7 +82,7 @@ void I2C_0_CLOCK_init(void)
 void I2C_0_init(void)
 {
 	I2C_0_CLOCK_init();
-	i2c_s_async_init(&I2C_0, SERCOM0, SERCOM0_i2c_s_buffer, SERCOM0_I2CS_BUFFER_SIZE);
+	i2c_s_sync_init(&I2C_0, SERCOM0);
 	I2C_0_PORT_init();
 }
 
